@@ -3,11 +3,11 @@ import reset from 'styled-reset';
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
+    box-sizing: border-box;
     input {
      &:focus {
        outline: none;
      }
-     box-sizing: border-box;
     }
    button {
      padding: 0;
