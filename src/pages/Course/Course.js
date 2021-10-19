@@ -4,20 +4,20 @@ import styled from 'styled-components';
 import { useRouteMatch } from 'react-router-dom';
 
 export default function Course() {
-  const [data, setData] = useState([]);
+  const [courseData, setCourseDats] = useState([]);
   const match = useRouteMatch();
   const { id } = match.params;
   const { name, summary, subcategory, category, thumbnail, detail, price } =
-    data;
-  const firstBox = data.course_info?.filter(el => el.info_type_id === 1);
-  const secondBox = data.course_info?.filter(el => el.info_type_id === 2);
-  const thirdBox = data.course_info?.filter(el => el.info_type_id === 3);
+    courseData;
+  const firstBox = courseData.course_info?.filter(el => el.info_type_id === 1);
+  const secondBox = courseData.course_info?.filter(el => el.info_type_id === 2);
+  const thirdBox = courseData.course_info?.filter(el => el.info_type_id === 3);
 
   useEffect(() => {
-    fetch(`http://10.58.5.115:8000/courses/course/4`)
+    fetch(`http://10.58.5.115:8000/courses/course/${id}`)
       .then(res => res.json())
-      .then(res => setData(res.result));
-  }, []);
+      .then(res => setCourseDats(res.result));
+  }, [id]);
 
   return (
     <div>
