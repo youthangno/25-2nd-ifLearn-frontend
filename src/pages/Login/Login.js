@@ -1,4 +1,5 @@
 import React from 'react';
+import { KAKAO_AUTH_URL } from './OAuth';
 import styled from 'styled-components';
 
 export default function Login() {
@@ -23,11 +24,15 @@ export default function Login() {
         <div />
         <h5>간편 로그인</h5>
       </EasyLogin>
-
-      <Button kakao>
-        <img alt="kakaoLogo" src="https://repickus.com/images/btn_kakao.png" />
-        카카오톡 로그인
-      </Button>
+      <a href={KAKAO_AUTH_URL}>
+        <Button kakao>
+          <img
+            alt="kakaoLogo"
+            src="https://repickus.com/images/btn_kakao.png"
+          />
+          카카오톡 로그인
+        </Button>
+      </a>
     </LoginWrapper>
   );
 }
