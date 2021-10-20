@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import LectureSideContent from './LectureSideContent';
+import theme from '../../styles/theme';
 
 function LectureSideBar() {
-  const [open, setOpen] = useState(false);
+  const [isOpened, setOpen] = useState(false);
 
-  const handleToggle = () => setOpen(!open);
+  const handleToggle = () => setOpen(prev => !prev);
 
   return (
     <>
-      <LectureSideContent open={open} onClick={handleToggle} />
+      <LectureSideContent isOpened={isOpened} onClick={handleToggle} />
       <AsideBar>
         <AsideMenu>
-          <i class="fas fa-bars" onClick={handleToggle} />
+          <i className="fas fa-bars" onClick={handleToggle} />
         </AsideMenu>
       </AsideBar>
     </>
@@ -28,7 +29,7 @@ const AsideBar = styled.div`
   padding-top: 10px;
   background-color: #f8f9fa;
 
-  @media screen and (max-width: 768px) {
+  @media ${({ labtop }) => theme.device.labtop} {
     display: none !important;
   }
 `;

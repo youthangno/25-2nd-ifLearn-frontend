@@ -33,7 +33,7 @@ const Container = styled.div`
   background-color: hsla(0, 0%, 9%, 0.69);
   margin-top: auto;
 
-  @media ${({ theme }) => theme.device.tablet} {
+  @media ${({ theme }) => theme.device.labtop} {
     display: none !important;
   }
 `;

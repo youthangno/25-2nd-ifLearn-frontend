@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import LectureHeader from './LectureHeader';
-import Video from './Video';
 import LectureFooter from './LectureFooter';
+import LectureSideBar from './LectureSideBar';
+import Video from './Video';
 // import LectureSideBar from './LectureSideBar';
 
 function Lecture() {
@@ -13,7 +14,7 @@ function Lecture() {
         <Video />
         <LectureFooter />
       </MainContent>
-      {/* <LectureSideBar /> */}
+      <LectureSideBar />
     </Container>
   );
 }
