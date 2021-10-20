@@ -4,11 +4,27 @@ import styled from 'styled-components';
 export default function MainSearch() {
   return (
     <Container>
-      <MainSearchText>성장기회의 평등을 추구합니다.</MainSearchText>
+      <MainSearchText>느리더라도 꾸준히 정진할 것.</MainSearchText>
       <MainSearchInput>
         <SearchInput placeholder="배우고 싶은 지식을 입력해보세요" />
         <i className="fas fa-search" />
       </MainSearchInput>
+      <LinkBox>
+        <TopLink>
+          <Links>#Front-End</Links>
+          <Links>#MVC</Links>
+          <Links>#React</Links>
+          <Links>#JavaScript</Links>
+          <Links>#Native</Links>
+          <Links>#Back-End</Links>
+          <Links>#Python</Links>
+        </TopLink>
+        <BottomLink>
+          <Links>#Spring</Links>
+          <Links>#게임개발</Links>
+          <Links>#Java</Links>
+        </BottomLink>
+      </LinkBox>
     </Container>
   );
 }
@@ -21,7 +37,7 @@ const Container = styled.div`
 
 const MainSearchText = styled.h1`
   font-size: 25px;
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 20px;
 `;
 
@@ -42,4 +58,26 @@ const MainSearchInput = styled.div`
     right: 25px;
     font-size: 20px;
   }
+`;
+
+const LinkBox = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const Links = styled.div`
+  background-color: #e8ebee;
+  padding: 8px 10px;
+  border-radius: 15px;
+  font-size: 12px;
+  margin: 0px 5px;
+`;
+
+const TopLink = styled.div`
+  display: flex;
+  margin: 15px 0px 10px 0px;
+`;
+
+const BottomLink = styled.div`
+  display: flex;
 `;
