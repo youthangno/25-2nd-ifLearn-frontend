@@ -13,6 +13,7 @@ export default function KakaoRedirect() {
       .then(res => res.json())
       .then(res => {
         fetch(BACKEND_TOKEN_URL, {
+          method: 'POST',
           headers: {
             Authorization: res.access_token,
           },
