@@ -1,0 +1,935 @@
+{
+  "result": [
+    {
+      "id": 1,
+      "name": "개발/프로그래밍",
+      "sub_category": [
+        {
+          "id": 1,
+          "name": "웹 개발",
+
+          "tag": [
+            {
+              "id": 1,
+              "name": "HTML/CSS"
+            },
+            {
+              "id": 2,
+              "name": "Front-End"
+            },
+            {
+              "id": 3,
+              "name": "JavaScript"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "프론트엔드",
+          "tag": [
+            {
+              "id": 1,
+              "name": "HTML/CSS"
+            },
+            {
+              "id": 2,
+              "name": "Front-End"
+            },
+            {
+              "id": 3,
+              "name": "JavaScript"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "name": "백엔드",
+          "tag": [
+            {
+              "id": 1,
+              "name": "HTML/CSS"
+            },
+            {
+              "id": 2,
+              "name": "Front-End"
+            },
+            {
+              "id": 3,
+              "name": "JavaScript"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "name": "풀스택",
+          "tag": [
+            {
+              "id": 1,
+              "name": "HTML/CSS"
+            },
+            {
+              "id": 2,
+              "name": "Front-End"
+            },
+            {
+              "id": 3,
+              "name": "JavaScript"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "name": "모바일 앱 개발",
+          "tag": [
+            {
+              "id": 1,
+              "name": "HTML/CSS"
+            },
+            {
+              "id": 2,
+              "name": "Front-End"
+            },
+            {
+              "id": 3,
+              "name": "JavaScript"
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "name": "프로그래밍 언어",
+          "tag": [
+            {
+              "id": 1,
+              "name": "HTML/CSS"
+            },
+            {
+              "id": 2,
+              "name": "Front-End"
+            },
+            {
+              "id": 3,
+              "name": "JavaScript"
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "name": "알고리즘/자료구조",
+          "tag": [
+            {
+              "id": 1,
+              "name": "HTML/CSS"
+            },
+            {
+              "id": 2,
+              "name": "Front-End"
+            },
+            {
+              "id": 3,
+              "name": "JavaScript"
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "name": "데이터 사이언스",
+          "tag": [
+            {
+              "id": 1,
+              "name": "HTML/CSS"
+            },
+            {
+              "id": 2,
+              "name": "Front-End"
+            },
+            {
+              "id": 3,
+              "name": "JavaScript"
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "name": "데이터베이스",
+          "tag": [
+            {
+              "id": 1,
+              "name": "HTML/CSS"
+            },
+            {
+              "id": 2,
+              "name": "Front-End"
+            },
+            {
+              "id": 3,
+              "name": "JavaScript"
+            }
+          ]
+        },
+        {
+          "id": 10,
+          "name": "데브옵스/인프라",
+          "tag": [
+            {
+              "id": 1,
+              "name": "HTML/CSS"
+            },
+            {
+              "id": 2,
+              "name": "Front-End"
+            },
+            {
+              "id": 3,
+              "name": "JavaScript"
+            }
+          ]
+        },
+        {
+          "id": 11,
+          "name": "개발 도구",
+          "tag": [
+            {
+              "id": 1,
+              "name": "HTML/CSS"
+            },
+            {
+              "id": 2,
+              "name": "Front-End"
+            },
+            {
+              "id": 3,
+              "name": "JavaScript"
+            }
+          ]
+        },
+        {
+          "id": 12,
+          "name": "게임 개발",
+          "tag": [
+            {
+              "id": 1,
+              "name": "HTML/CSS"
+            },
+            {
+              "id": 2,
+              "name": "Front-End"
+            },
+            {
+              "id": 3,
+              "name": "JavaScript"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "보안 네트워크",
+      "sub_category": [
+        {
+          "id": 13,
+          "name": "보안",
+          "tag": [
+            {
+              "id": 1,
+              "name": "HTML/CSS"
+            },
+            {
+              "id": 2,
+              "name": "Front-End"
+            },
+            {
+              "id": 3,
+              "name": "JavaScript"
+            }
+          ]
+        },
+        {
+          "id": 14,
+          "name": "자동화",
+          "tag": [
+            {
+              "id": 1,
+              "name": "HTML/CSS"
+            },
+            {
+              "id": 2,
+              "name": "Front-End"
+            },
+            {
+              "id": 3,
+              "name": "JavaScript"
+            }
+          ]
+        },
+        {
+          "id": 15,
+          "name": "시스템",
+          "tag": [
+            {
+              "id": 1,
+              "name": "HTML/CSS"
+            },
+            {
+              "id": 2,
+              "name": "Front-End"
+            },
+            {
+              "id": 3,
+              "name": "JavaScript"
+            }
+          ]
+        },
+        {
+          "id": 16,
+          "name": "인프라",
+          "tag": [
+            {
+              "id": 1,
+              "name": "HTML/CSS"
+            },
+            {
+              "id": 2,
+              "name": "Front-End"
+            },
+            {
+              "id": 3,
+              "name": "JavaScript"
+            }
+          ]
+        },
+        {
+          "id": 17,
+          "name": "클라우드",
+          "tag": [
+            {
+              "id": 1,
+              "name": "HTML/CSS"
+            },
+            {
+              "id": 2,
+              "name": "Front-End"
+            },
+            {
+              "id": 3,
+              "name": "JavaScript"
+            }
+          ]
+        },
+        {
+          "id": 18,
+          "name": "사물인터넷",
+          "tag": [
+            {
+              "id": 1,
+              "name": "HTML/CSS"
+            },
+            {
+              "id": 2,
+              "name": "Front-End"
+            },
+            {
+              "id": 3,
+              "name": "JavaScript"
+            }
+          ]
+        },
+        {
+          "id": 19,
+          "name": "블록체인",
+          "tag": [
+            {
+              "id": 1,
+              "name": "HTML/CSS"
+            },
+            {
+              "id": 2,
+              "name": "Front-End"
+            },
+            {
+              "id": 3,
+              "name": "JavaScript"
+            }
+          ]
+        },
+        {
+          "id": 20,
+          "name": "기타",
+          "tag": [
+            {
+              "id": 1,
+              "name": "HTML/CSS"
+            },
+            {
+              "id": 2,
+              "name": "Front-End"
+            },
+            {
+              "id": 3,
+              "name": "JavaScript"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "데이터 사이언스",
+      "sub_category": [
+        {
+          "id": 21,
+          "name": "데이터 분석",
+          "tag": [
+            {
+              "id": 1,
+              "name": "HTML/CSS"
+            },
+            {
+              "id": 2,
+              "name": "Front-End"
+            },
+            {
+              "id": 3,
+              "name": "JavaScript"
+            }
+          ]
+        },
+        {
+          "id": 22,
+          "name": "인공지능",
+          "tag": [
+            {
+              "id": 1,
+              "name": "HTML/CSS"
+            },
+            {
+              "id": 2,
+              "name": "Front-End"
+            },
+            {
+              "id": 3,
+              "name": "JavaScript"
+            }
+          ]
+        },
+        {
+          "id": 23,
+          "name": "데이터베이스",
+          "tag": [
+            {
+              "id": 1,
+              "name": "HTML/CSS"
+            },
+            {
+              "id": 2,
+              "name": "Front-End"
+            },
+            {
+              "id": 3,
+              "name": "JavaScript"
+            }
+          ]
+        },
+        {
+          "id": 24,
+          "name": "데이터 시각화",
+          "tag": [
+            {
+              "id": 1,
+              "name": "HTML/CSS"
+            },
+            {
+              "id": 2,
+              "name": "Front-End"
+            },
+            {
+              "id": 3,
+              "name": "JavaScript"
+            }
+          ]
+        },
+        {
+          "id": 25,
+          "name": "데이터 수집 처리",
+          "tag": [
+            {
+              "id": 1,
+              "name": "HTML/CSS"
+            },
+            {
+              "id": 2,
+              "name": "Front-End"
+            },
+            {
+              "id": 3,
+              "name": "JavaScript"
+            }
+          ]
+        },
+        {
+          "id": 26,
+          "name": "기타",
+          "tag": [
+            {
+              "id": 1,
+              "name": "HTML/CSS"
+            },
+            {
+              "id": 2,
+              "name": "Front-End"
+            },
+            {
+              "id": 3,
+              "name": "JavaScript"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "크리에이티브",
+      "sub_category": [
+        {
+          "id": 27,
+          "name": "CAD 3D 모델링",
+          "tag": [
+            {
+              "id": 1,
+              "name": "HTML/CSS"
+            },
+            {
+              "id": 2,
+              "name": "Front-End"
+            },
+            {
+              "id": 3,
+              "name": "JavaScript"
+            }
+          ]
+        },
+        {
+          "id": 28,
+          "name": "웹 퍼블리싱",
+          "tag": [
+            {
+              "id": 1,
+              "name": "HTML/CSS"
+            },
+            {
+              "id": 2,
+              "name": "Front-End"
+            },
+            {
+              "id": 3,
+              "name": "JavaScript"
+            }
+          ]
+        },
+        {
+          "id": 29,
+          "name": " UX/UI",
+          "tag": [
+            {
+              "id": 1,
+              "name": "HTML/CSS"
+            },
+            {
+              "id": 2,
+              "name": "Front-End"
+            },
+            {
+              "id": 3,
+              "name": "JavaScript"
+            }
+          ]
+        },
+        {
+          "id": 30,
+          "name": "그래픽 디자인",
+          "tag": [
+            {
+              "id": 1,
+              "name": "HTML/CSS"
+            },
+            {
+              "id": 2,
+              "name": "Front-End"
+            },
+            {
+              "id": 3,
+              "name": "JavaScript"
+            }
+          ]
+        },
+        {
+          "id": 31,
+          "name": "디자인 홈",
+          "tag": [
+            {
+              "id": 1,
+              "name": "HTML/CSS"
+            },
+            {
+              "id": 2,
+              "name": "Front-End"
+            },
+            {
+              "id": 3,
+              "name": "JavaScript"
+            }
+          ]
+        },
+        {
+          "id": 32,
+          "name": "사진/영상",
+          "tag": [
+            {
+              "id": 1,
+              "name": "HTML/CSS"
+            },
+            {
+              "id": 2,
+              "name": "Front-End"
+            },
+            {
+              "id": 3,
+              "name": "JavaScript"
+            }
+          ]
+        },
+        {
+          "id": 33,
+          "name": "VR/AR",
+          "tag": [
+            {
+              "id": 1,
+              "name": "HTML/CSS"
+            },
+            {
+              "id": 2,
+              "name": "Front-End"
+            },
+            {
+              "id": 3,
+              "name": "JavaScript"
+            }
+          ]
+        },
+        {
+          "id": 34,
+          "name": "사운드",
+          "tag": [
+            {
+              "id": 1,
+              "name": "HTML/CSS"
+            },
+            {
+              "id": 2,
+              "name": "Front-End"
+            },
+            {
+              "id": 3,
+              "name": "JavaScript"
+            }
+          ]
+        },
+        {
+          "id": 35,
+          "name": "기타",
+          "tag": [
+            {
+              "id": 1,
+              "name": "HTML/CSS"
+            },
+            {
+              "id": 2,
+              "name": "Front-End"
+            },
+            {
+              "id": 3,
+              "name": "JavaScript"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "직무 마케팅",
+      "sub_category": [
+        {
+          "id": 36,
+          "name": "오피스",
+          "tag": [
+            {
+              "id": 1,
+              "name": "HTML/CSS"
+            },
+            {
+              "id": 2,
+              "name": "Front-End"
+            },
+            {
+              "id": 3,
+              "name": "JavaScript"
+            }
+          ]
+        },
+        {
+          "id": 37,
+          "name": "마케팅",
+          "tag": [
+            {
+              "id": 1,
+              "name": "HTML/CSS"
+            },
+            {
+              "id": 2,
+              "name": "Front-End"
+            },
+            {
+              "id": 3,
+              "name": "JavaScript"
+            }
+          ]
+        },
+        {
+          "id": 38,
+          "name": "기획/전략/PM",
+          "tag": [
+            {
+              "id": 1,
+              "name": "HTML/CSS"
+            },
+            {
+              "id": 2,
+              "name": "Front-End"
+            },
+            {
+              "id": 3,
+              "name": "JavaScript"
+            }
+          ]
+        },
+        {
+          "id": 39,
+          "name": "업무 자동화",
+          "tag": [
+            {
+              "id": 1,
+              "name": "HTML/CSS"
+            },
+            {
+              "id": 2,
+              "name": "Front-End"
+            },
+            {
+              "id": 3,
+              "name": "JavaScript"
+            }
+          ]
+        },
+        {
+          "id": 40,
+          "name": "금융 경영",
+          "tag": [
+            {
+              "id": 1,
+              "name": "HTML/CSS"
+            },
+            {
+              "id": 2,
+              "name": "Front-End"
+            },
+            {
+              "id": 3,
+              "name": "JavaScript"
+            }
+          ]
+        },
+        {
+          "id": 41,
+          "name": "기타",
+          "tag": [
+            {
+              "id": 1,
+              "name": "HTML/CSS"
+            },
+            {
+              "id": 2,
+              "name": "Front-End"
+            },
+            {
+              "id": 3,
+              "name": "JavaScript"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "학문/외국어",
+      "sub_category": [
+        {
+          "id": 42,
+          "name": "수학",
+          "tag": [
+            {
+              "id": 1,
+              "name": "HTML/CSS"
+            },
+            {
+              "id": 2,
+              "name": "Front-End"
+            },
+            {
+              "id": 3,
+              "name": "JavaScript"
+            }
+          ]
+        },
+        {
+          "id": 43,
+          "name": "외국어",
+          "tag": [
+            {
+              "id": 1,
+              "name": "HTML/CSS"
+            },
+            {
+              "id": 2,
+              "name": "Front-End"
+            },
+            {
+              "id": 3,
+              "name": "JavaScript"
+            }
+          ]
+        },
+        {
+          "id": 44,
+          "name": "기타",
+          "tag": [
+            {
+              "id": 1,
+              "name": "HTML/CSS"
+            },
+            {
+              "id": 2,
+              "name": "Front-End"
+            },
+            {
+              "id": 3,
+              "name": "JavaScript"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "커리어",
+      "sub_category": [
+        {
+          "id": 45,
+          "name": "취업/이직",
+          "tag": [
+            {
+              "id": 1,
+              "name": "HTML/CSS"
+            },
+            {
+              "id": 2,
+              "name": "Front-End"
+            },
+            {
+              "id": 3,
+              "name": "JavaScript"
+            }
+          ]
+        },
+        {
+          "id": 46,
+          "name": "개인 브랜딩",
+          "tag": [
+            {
+              "id": 1,
+              "name": "HTML/CSS"
+            },
+            {
+              "id": 2,
+              "name": "Front-End"
+            },
+            {
+              "id": 3,
+              "name": "JavaScript"
+            }
+          ]
+        },
+        {
+          "id": 47,
+          "name": "창업",
+          "tag": [
+            {
+              "id": 1,
+              "name": "HTML/CSS"
+            },
+            {
+              "id": 2,
+              "name": "Front-End"
+            },
+            {
+              "id": 3,
+              "name": "JavaScript"
+            }
+          ]
+        },
+        {
+          "id": 48,
+          "name": "기타",
+          "tag": [
+            {
+              "id": 1,
+              "name": "HTML/CSS"
+            },
+            {
+              "id": 2,
+              "name": "Front-End"
+            },
+            {
+              "id": 3,
+              "name": "JavaScript"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "교양",
+      "sub_category": [
+        {
+          "id": 49,
+          "name": "교양",
+          "tag": [
+            {
+              "id": 1,
+              "name": "HTML/CSS"
+            },
+            {
+              "id": 2,
+              "name": "Front-End"
+            },
+            {
+              "id": 3,
+              "name": "JavaScript"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

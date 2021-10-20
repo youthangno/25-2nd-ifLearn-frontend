@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useHistory } from 'react-router';
 
 export default function MainVideo({ lecture }) {
   const isChangeStar = num => {
@@ -13,12 +14,17 @@ export default function MainVideo({ lecture }) {
       case 5:
         return '★'.repeat(num);
       default:
-        return Error('out of range');
+        throw new Error('out of range');
     }
   };
 
+  const history = useHistory();
+  const goToCourse = () => {
+    history.push(`/course/${lecture.id}`);
+  };
+
   return (
-    <Container>
+    <Container onClick={goToCourse}>
       <LectureImg src={lecture.thumbnail} alt="img" />
       <LectureTitle>{lecture.title}</LectureTitle>
       <LectureAuthor>{lecture.author}</LectureAuthor>
