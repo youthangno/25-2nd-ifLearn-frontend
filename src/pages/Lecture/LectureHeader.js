@@ -25,7 +25,7 @@ const Container = styled.div`
   background: #171717;
   color: #fff;
 
-  @media ${({ theme }) => theme.device.tablet} {
+  @media ${({ theme }) => theme.device.labtop} {
     display: none !important;
   }
 `;
