@@ -2,7 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import MainSearch from './MainSearch';
 import MainLecture from './MainLecture';
+import MainSlider from './MainSlider';
 import { useState, useEffect } from 'react';
+import Slider from 'react-slick';
 
 export default function Main() {
   const [data, setData] = useState([]);
@@ -23,27 +25,13 @@ export default function Main() {
         setData(data.result);
       });
   }, []);
+
   return (
     <Section>
       <ImgSection>
-        {images &&
-          images.map(image => {
-            return <img src={image.image_url} alt="mainImg" key={image.id} />;
-          })}
+        <MainSlider images={images} />
       </ImgSection>
-      <ImgNav>
-        <ImgNavControl>
-          <div>1/6</div>
-          <div>
-            <i className="fas fa-chevron-left" />
-            <i className="fas fa-pause" />
-            <i className="fas fa-chevron-right" />
-          </div>
-        </ImgNavControl>
-        <ImgNavToggleBtn>
-          <i className="fas fa-chevron-down" />
-        </ImgNavToggleBtn>
-      </ImgNav>
+      <ImgNav />
 
       <MainSearch />
 
@@ -54,9 +42,11 @@ export default function Main() {
             <LectureSubTitle>이미 검증된 쉽고 친절한 입문강의</LectureSubTitle>
           </LectureTitleBox>
           <MainLectureProduct>
-            {data.map(item => {
-              return <MainLecture key={item.id} lecture={item} />;
-            })}
+            <StyledSlider {...settings}>
+              {data.map(item => {
+                return <MainLecture key={item.id} lecture={item} />;
+              })}
+            </StyledSlider>
           </MainLectureProduct>
         </MainLectureContainer>
       </MainLectureBox>
@@ -68,9 +58,11 @@ export default function Main() {
             <LectureSubTitle>이미 검증된 쉽고 재미있는 뉴스~</LectureSubTitle>
           </LectureTitleBox>
           <MainLectureProduct>
-            {data.map(item => {
-              return <MainLecture key={item.id} lecture={item} />;
-            })}
+            <StyledSlider {...settings}>
+              {data.map(item => {
+                return <MainLecture key={item.id} lecture={item} />;
+              })}
+            </StyledSlider>
           </MainLectureProduct>
         </MainLectureContainer>
       </MainLectureBox>
@@ -84,10 +76,11 @@ export default function Main() {
             </LectureSubTitle>
           </LectureTitleBox>
           <MainLectureProduct>
-            {data &&
-              data.map(item => {
+            <StyledSlider {...settings}>
+              {data.map(item => {
                 return <MainLecture key={item.id} lecture={item} />;
               })}
+            </StyledSlider>
           </MainLectureProduct>
         </MainLectureContainer>
       </MainLectureBox>
@@ -95,17 +88,57 @@ export default function Main() {
   );
 }
 
+const settings = {
+  infinite: false,
+  speed: 500,
+  slidesToScroll: 5,
+  slidesToShow: 5,
+  arrows: true,
+};
+
+const MainLectureProduct = styled.div`
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+
+  .slick-prev:before {
+    position: relative;
+    left: 5px;
+    content: '<';
+    color: #000;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    font-size: 25px;
+    box-shadow: 8px 3px 12px grey;
+    padding: 10px 15px;
+  }
+
+  .slick-next:before {
+    position: relative;
+    right: 25px;
+    content: '>';
+    color: #000;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    font-size: 25px;
+    box-shadow: 8px 3px 12px grey;
+    padding: 10px 15px;
+  }
+`;
+
+const StyledSlider = styled(Slider)`
+  width: 100%;
+`;
+
 const Section = styled.section`
   height: 100%;
 `;
 
 const ImgSection = styled.div`
-  float: left;
-  margin: 0 auto;
-  height: 100%;
-  img {
-    width: 100%;
-  }
+  display: flex;
+  width: 100%;
 `;
 
 const ImgNav = styled.div`
@@ -114,32 +147,6 @@ const ImgNav = styled.div`
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding: 10px 100px;
   margin-bottom: 55px;
-`;
-
-const ImgNavControl = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 135px;
-  padding: 10px 15px;
-  background-color: #7f7f7f;
-  color: #fff;
-  border-radius: 30px;
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
-  .fas.fa-pause {
-    margin: 0px 5px;
-  }
-`;
-
-const ImgNavToggleBtn = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.2);
 `;
 
 const MainLectureBox = styled.article`
@@ -171,9 +178,4 @@ const LectureSubTitle = styled.h3`
   font-size: 15px;
   color: grey;
   margin: 15px 10px 25px 0px;
-`;
-
-const MainLectureProduct = styled.div`
-  display: flex;
-  margin-bottom: 10px;
 `;

@@ -30,7 +30,6 @@ export default function MainVideo({ lecture }) {
 
 const Container = styled.section`
   border-radius: 5px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
   &:first-child {
     margin-right: 8px;
   }
