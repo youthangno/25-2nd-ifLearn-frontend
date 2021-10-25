@@ -1,94 +1,92 @@
-{
-  "result": [
-    {
-      "id": 1,
-      "thumnail": "https://cdn.pixabay.com/photo/2021/10/08/06/45/seagulls-6690361_960_720.jpg",
-      "title": "빈전공자를 위한 개발자 취업 올인원 가이드[통합편]",
-      "author": "생철리",
-      "price": 57000,
-      "summary": "체육을 전공하고 29살에 개발 공부를 시작해서, 30살에 연봉 4천만원, 31살에 연봉 x천만원 이상 받는 탑티어 회사 개발자가 된 노하우를 모두 담았습니다!",
-      "level": "코린이",
-      "sub-category": "12312314214고 29살에 개발 공부를 시작해서, 30살에 연봉 4천만원, 31살에 연봉 x천만원 이상 받는 탑티어 회사 개발자가 된 노하우를 모두 담았습니다!",
-      "star-number": 5,
-      "popular": 123,
-      "hash-tag": [
-        { "id": 1, "tag": "html" },
-        { "id": 2, "tag": "css" },
-        { "id": 3, "tag": "javaScript" },
-        { "id": 4, "tag": "React" }
-      ]
-    },
-    {
-      "id": 2,
-      "thumnail": "https://cdn.pixabay.com/photo/2021/10/08/06/45/seagulls-6690361_960_720.jpg",
-      "title": "빈전공자를 위한 개발자 취업 올인원 가이드[통합편]",
-      "author": "생철리",
-      "price": 12342,
-      "summary": "체육을 전공하고 29살에 개발 공부를 시작해서, 30살에 연봉 4천만원, 31살에 연봉 x천만원 이상 받는 탑티어 회사 개발자가 된 노하우를 모두 담았습니다!",
-      "level": "코린이",
-      "sub-category": "체육을 전공하고 29살에 개발 공부를 시작해서, 30살에 연봉 4천만원, 31살에 연봉 x천만원 이상 받는 탑티어 회사 개발자가 된 노하우를 모두 담았습니다!",
-      "star-number": 5,
-      "popular": 123,
-      "hash-tag": [
-        { "id": 1, "tag": "html" },
-        { "id": 2, "tag": "css" },
-        { "id": 3, "tag": "javaScript" },
-        { "id": 4, "tag": "React" }
-      ]
-    },
-    {
-      "id": 3,
-      "thumnail": "https://cdn.pixabay.com/photo/2021/10/08/06/45/seagulls-6690361_960_720.jpg",
-      "title": "빈전공자를 위한 개발자 취업 올인원 가이드[통합편]",
-      "author": "생철리",
-      "price": 24300,
-      "summary": "체육을 전공하고 29살에 개발 공부를 시작해서, 30살에 연봉 4천만원, 31살에 연봉 x천만원 이상 받는 탑티어 회사 개발자가 된 노하우를 모두 담았습니다!",
-      "level": "코린이",
-      "sub-category": "체육을 전공하고 29살에 개발 공부를 시작해서, 30살에 연봉 4천만원, 31살에 연봉 x천만원 이상 받는 탑티어 회사 개발자가 된 노하우를 모두 담았습니다!",
-      "star-number": 5,
-      "popular": 123,
-      "hash-tag": [
-        { "id": 1, "tag": "html" },
-        { "id": 2, "tag": "css" },
-        { "id": 3, "tag": "javaScript" },
-        { "id": 4, "tag": "React" }
-      ]
-    },
-    {
-      "id": 4,
-      "thumnail": "https://cdn.pixabay.com/photo/2021/10/08/06/45/seagulls-6690361_960_720.jpg",
-      "title": "빈전공자를 위한 개발자 취업 올인원 가이드[통합편]",
-      "author": "생철리",
-      "price": 12000,
-      "summary": "체육을 전공하고 29살에 개발 공부를 시작해서, 30살에 연봉 4천만원, 31살에 연봉 x천만원 이상 받는 탑티어 회사 개발자가 된 노하우를 모두 담았습니다!",
-      "level": "코린이",
-      "sub-category": "체육을 전공하고 29살에 개발 공부를 시작해서, 30살에 연봉 4천만원, 31살에 연봉 x천만원 이상 받는 탑티어 회사 개발자가 된 노하우를 모두 담았습니다!",
-      "star-number": 5,
-      "popular": 123,
-      "hash-tag": [
-        { "id": 1, "tag": "html" },
-        { "id": 2, "tag": "css" },
-        { "id": 3, "tag": "javaScript" },
-        { "id": 4, "tag": "React" }
-      ]
-    },
-    {
-      "id": 5,
-      "thumnail": "https://cdn.pixabay.com/photo/2021/10/08/06/45/seagulls-6690361_960_720.jpg",
-      "title": "빈전공자를 위한 개발자 취업 올인원 가이드 [통합편]",
-      "author": "생철리",
-      "price": 54000,
-      "summary": "체육을 전공하고 29살에 개발 공부를 시작해서, 30살에 연봉 4천만원, 31살에 연봉 x천만원 이상 받는 탑티어 회사 개발자가 된 노하우를 모두 담았습니다!",
-      "level": "코린이",
-      "sub-category": "체육을 전공하고 29살에 개발 공부를 시작해서, 30살에 연봉 4천만원, 31살에 연봉 x천만원 이상 받는 탑티어 회사 개발자가 된 노하우를 모두 담았습니다!",
-      "star-number": 5,
-      "popular": 123,
-      "hash-tag": [
-        { "id": 1, "tag": "html" },
-        { "id": 2, "tag": "css" },
-        { "id": 3, "tag": "javaScript" },
-        { "id": 4, "tag": "React" }
-      ]
-    }
-  ]
-}
+[
+  {
+    "id": 1,
+    "thumnail": "https://cdn.pixabay.com/photo/2021/10/08/06/45/seagulls-6690361_960_720.jpg",
+    "title": "빈전공자를 위한 개발자 취업 올인원 가이드[통합편]",
+    "author": "생철리",
+    "price": 57000,
+    "summary": "체육을 전공하고 29살에 개발 공부를 시작해서, 30살에 연봉 4천만원, 31살에 연봉 x천만원 이상 받는 탑티어 회사 개발자가 된 노하우를 모두 담았습니다!",
+    "level": "코린이",
+    "sub-category": "12312314214고 29살에 개발 공부를 시작해서, 30살에 연봉 4천만원, 31살에 연봉 x천만원 이상 받는 탑티어 회사 개발자가 된 노하우를 모두 담았습니다!",
+    "star-number": 5,
+    "popular": 123,
+    "hash-tag": [
+      { "id": 1, "tag": "html" },
+      { "id": 2, "tag": "css" },
+      { "id": 3, "tag": "javaScript" },
+      { "id": 4, "tag": "React" }
+    ]
+  },
+  {
+    "id": 2,
+    "thumnail": "https://cdn.pixabay.com/photo/2021/10/08/06/45/seagulls-6690361_960_720.jpg",
+    "title": "빈전공자를 위한 개발자 취업 올인원 가이드[통합편]",
+    "author": "생철리",
+    "price": 12342,
+    "summary": "체육을 전공하고 29살에 개발 공부를 시작해서, 30살에 연봉 4천만원, 31살에 연봉 x천만원 이상 받는 탑티어 회사 개발자가 된 노하우를 모두 담았습니다!",
+    "level": "코린이",
+    "sub-category": "체육을 전공하고 29살에 개발 공부를 시작해서, 30살에 연봉 4천만원, 31살에 연봉 x천만원 이상 받는 탑티어 회사 개발자가 된 노하우를 모두 담았습니다!",
+    "star-number": 5,
+    "popular": 123,
+    "hash-tag": [
+      { "id": 1, "tag": "html" },
+      { "id": 2, "tag": "css" },
+      { "id": 3, "tag": "javaScript" },
+      { "id": 4, "tag": "React" }
+    ]
+  },
+  {
+    "id": 3,
+    "thumnail": "https://cdn.pixabay.com/photo/2021/10/08/06/45/seagulls-6690361_960_720.jpg",
+    "title": "빈전공자를 위한 개발자 취업 올인원 가이드[통합편]",
+    "author": "생철리",
+    "price": 24300,
+    "summary": "체육을 전공하고 29살에 개발 공부를 시작해서, 30살에 연봉 4천만원, 31살에 연봉 x천만원 이상 받는 탑티어 회사 개발자가 된 노하우를 모두 담았습니다!",
+    "level": "코린이",
+    "sub-category": "체육을 전공하고 29살에 개발 공부를 시작해서, 30살에 연봉 4천만원, 31살에 연봉 x천만원 이상 받는 탑티어 회사 개발자가 된 노하우를 모두 담았습니다!",
+    "star-number": 5,
+    "popular": 123,
+    "hash-tag": [
+      { "id": 1, "tag": "html" },
+      { "id": 2, "tag": "css" },
+      { "id": 3, "tag": "javaScript" },
+      { "id": 4, "tag": "React" }
+    ]
+  },
+  {
+    "id": 4,
+    "thumnail": "https://cdn.pixabay.com/photo/2021/10/08/06/45/seagulls-6690361_960_720.jpg",
+    "title": "빈전공자를 위한 개발자 취업 올인원 가이드[통합편]",
+    "author": "생철리",
+    "price": 12000,
+    "summary": "체육을 전공하고 29살에 개발 공부를 시작해서, 30살에 연봉 4천만원, 31살에 연봉 x천만원 이상 받는 탑티어 회사 개발자가 된 노하우를 모두 담았습니다!",
+    "level": "코린이",
+    "sub-category": "체육을 전공하고 29살에 개발 공부를 시작해서, 30살에 연봉 4천만원, 31살에 연봉 x천만원 이상 받는 탑티어 회사 개발자가 된 노하우를 모두 담았습니다!",
+    "star-number": 5,
+    "popular": 123,
+    "hash-tag": [
+      { "id": 1, "tag": "html" },
+      { "id": 2, "tag": "css" },
+      { "id": 3, "tag": "javaScript" },
+      { "id": 4, "tag": "React" }
+    ]
+  },
+  {
+    "id": 5,
+    "thumnail": "https://cdn.pixabay.com/photo/2021/10/08/06/45/seagulls-6690361_960_720.jpg",
+    "title": "빈전공자를 위한 개발자 취업 올인원 가이드 [통합편]",
+    "author": "생철리",
+    "price": 54000,
+    "summary": "체육을 전공하고 29살에 개발 공부를 시작해서, 30살에 연봉 4천만원, 31살에 연봉 x천만원 이상 받는 탑티어 회사 개발자가 된 노하우를 모두 담았습니다!",
+    "level": "코린이",
+    "sub-category": "체육을 전공하고 29살에 개발 공부를 시작해서, 30살에 연봉 4천만원, 31살에 연봉 x천만원 이상 받는 탑티어 회사 개발자가 된 노하우를 모두 담았습니다!",
+    "star-number": 5,
+    "popular": 123,
+    "hash-tag": [
+      { "id": 1, "tag": "html" },
+      { "id": 2, "tag": "css" },
+      { "id": 3, "tag": "javaScript" },
+      { "id": 4, "tag": "React" }
+    ]
+  }
+]
