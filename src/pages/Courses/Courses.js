@@ -11,11 +11,19 @@ function Courses() {
   const [optionOpen, setOptionOpen] = useState('select');
 
   useEffect(() => {
+    getList();
+  }, []);
+
+  useEffect(() => {
+    handleInputSearchResult();
+  }, []);
+
+  const getList = () => {
     fetch(`${API}/`)
       // fetch('http://localhost:3000/data/data.json')
       .then(res => res.json())
       .then(data => setLectureList(data.result));
-  }, []);
+  };
 
   const toggleLecture = () => {
     setSkillOpen(skillOpen => !skillOpen);
@@ -59,7 +67,6 @@ function Courses() {
       .then(res => res.json())
       .then(data => setLectureList(data.result));
   };
-
   return (
     <Inner>
       <Section>
@@ -69,7 +76,10 @@ function Courses() {
               <li>전체강의</li>
               <li>
                 <SkillIcon>
-                  <p onClick={toggleLecture}>개발 . 프로그래밍 </p>
+                  <div onClick={toggleLecture}>
+                    개발 . 프로그래밍
+                    <Arrow>{skillOpen ? '🡫' : '➔'}</Arrow>
+                  </div>
                   <ul
                     className={skillOpen ? 'showLecture' : 'hideLecture'}
                     onClick={handlePrevent}
@@ -96,7 +106,7 @@ function Courses() {
             <Difficult>난이도</Difficult>
             <Input>
               <InputLevel>
-                <input onClick={() => handleLectureFilter(2)} type="checkbox" />{' '}
+                <input onClick={() => handleLectureFilter(1)} type="checkbox" />{' '}
                 <label>입문</label>
               </InputLevel>
               <InputLevel>
@@ -117,13 +127,10 @@ function Courses() {
           />
           <Upper>
             <Category>
-              <span>전체</span>
+              <span>개발.프로그래밍</span>
               {/* before로 옆줄 */}
-              <span>개발 + 프로그래밍</span>
             </Category>
             <Button>
-              <button>전체보기</button>
-              <button>스팬보기</button>
               <select value={optionOpen} onChange={selectOption}>
                 <option value="recommand">추천순</option>
                 <option value="low">낮은가격</option>
@@ -135,13 +142,12 @@ function Courses() {
 
           <MediumSkill>
             <SearchBtn handleInputSearchResult={handleInputSearchResult} />
-            <TagBtn color>
+            <TagBtn>
               <SkillBtn onClick={() => handleLectureFilter('skill=html')}>
                 Html
               </SkillBtn>
               <SkillBtn onClick={() => handleLectureFilter('skill=Css')}>
                 Css
-                {/* 요게 바뀌면 요게 바뀌게 */}
               </SkillBtn>
               <SkillBtn onClick={() => handleLectureFilter('skill=styled')}>
                 styled
@@ -231,6 +237,10 @@ const SkillIcon = styled.div`
   }
 `;
 
+const Arrow = styled.span`
+  padding: 25px;
+`;
+
 const Navcheckbox = styled.div`
   margin-top: 15px;
 `;
@@ -262,7 +272,10 @@ const Category = styled.span`
 `;
 
 const Button = styled.div`
-  display: flex;
+  margin-top: 11px;
+  select {
+    padding: 8px;
+  }
 `;
 
 const MediumSkill = styled.div`
@@ -276,6 +289,9 @@ const SkillBtn = styled.button`
   border-radius: 4px;
   background-color: #b8b8b8;
   color: white;
+  &:focus {
+    background-color: #1bb571;
+  }
 `;
 
 const TagBtn = styled.div`

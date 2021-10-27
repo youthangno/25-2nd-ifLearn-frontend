@@ -1,5 +1,7 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+import { useHistory } from 'react-router';
+import { useState } from 'react';
+import styled from 'styled-components';
 
 function LectureList({
   id,
@@ -18,22 +20,33 @@ function LectureList({
     setMouseOver(mouseOver => !mouseOver);
   };
 
+  const history = useHistory();
+
+  const gotoDetail = () => {
+    history.push(`/course/${id}`);
+  };
+
   return (
     <div
+      onClick={gotoDetail}
       className={mouseOver ? 'hover' : 'list'}
       onMouseEnter={handleHoverList}
       onMouseLeave={handleHoverList}
     >
-      <img alt="강의리스트" src={mouseOver ? null : thumbnail} />
+      <img alt="" src={mouseOver ? null : thumbnail} />
       <p className="title">{mouseOver ? title : title}</p>
       <p>{mouseOver ? null : author}</p>
       <p>{mouseOver ? null : star}</p>
-      <p>{mouseOver ? null : price}</p>
+      <P>{mouseOver ? null : '₩' + price}</P>
       <p>{mouseOver && summary}</p>
-      <p>{mouseOver && level}</p>
+      <P>{mouseOver && '📶' + level}</P>
       <p>{mouseOver && category}</p>
     </div>
   );
 }
 
+const P = styled.p`
+  color: #3298dc;
+  font-weight: 900;
+`;
 export default LectureList;
