@@ -1,4 +1,4 @@
-const FinishedUnitNum = ({ data }) => {
+const FinishedUnitNum = data => {
   const section_list = data.section_list;
   let finishedUnit = 0;
 

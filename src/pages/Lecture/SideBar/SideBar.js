@@ -16,8 +16,8 @@ function SideBar({ data }) {
         data={data}
       />
       <AsideBar>
-        <AsideMenu>
-          <i className="fas fa-bars" onClick={setIsOpened} />
+        <AsideMenu onClick={setIsOpened}>
+          <i className="fas fa-bars" />
         </AsideMenu>
       </AsideBar>
     </>

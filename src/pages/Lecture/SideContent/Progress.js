@@ -7,7 +7,7 @@ import Percent from '../../../components/ProgressData/Percent';
 
 const Progress = ({ data }) => {
   let period = data.period;
-
+  console.log('data', data.section_legnth);
   const unLimit = period => {
     if (period === 999) {
       return '무제한';
@@ -18,15 +18,13 @@ const Progress = ({ data }) => {
     <ProgressCover>
       <Terms>수강기한 : {unLimit(period)}</Terms>
       <ProgressText>
-        {` 진도율 : ${FinishedUnitNum({ data })}/${
-          data.section_legnth
-        }강 (${Percent({ data })}%) | 시간 : ${CurrentRuntime({
-          data,
-        })}분/${Runtime({
-          data,
-        })}분`}
+        {` 진도율 : ${FinishedUnitNum(data)}/${
+          data.section_length
+        }강 (${Percent(data)}%) | 시간 : ${CurrentRuntime(data)}분/${Runtime(
+          data
+        )}분`}
       </ProgressText>
-      <ProgressBar value={Percent({ data })} max="100" />
+      <ProgressBar value={Percent(data)} max="100" />
     </ProgressCover>
   );
 };
