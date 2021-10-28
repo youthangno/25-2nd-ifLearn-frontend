@@ -35,6 +35,7 @@ export default function MainVideo({ lecture }) {
 }
 
 const Container = styled.section`
+  cursor: pointer;
   border-radius: 5px;
   &:first-child {
     margin-right: 8px;

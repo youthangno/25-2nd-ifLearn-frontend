@@ -57,7 +57,7 @@ export default function Main() {
 
           <div>
             <Btn>
-              <i class="fas fa-chevron-down" />
+              <i className="fas fa-chevron-down" />
             </Btn>
           </div>
         </ImgNav>
