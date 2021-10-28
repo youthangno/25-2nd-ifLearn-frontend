@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import { lighten } from 'polished';
 
 function LectureHeader({ title }) {
-  console.log('title', title);
   return (
     <Container>
       <Wrapper>
@@ -41,6 +40,7 @@ const Wrapper = styled.div`
 const ArrowButton = styled.a`
   height: 100%;
   padding: 16px 16px 16px 18px;
+  color: white;
   font-weight: 500;
   font-size: 16px;
   cursor: pointer;

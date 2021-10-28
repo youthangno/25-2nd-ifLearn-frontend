@@ -2,23 +2,33 @@ import React from 'react';
 import styled from 'styled-components';
 import { lighten } from 'polished';
 
-function LectureFooter({ data }) {
-  const checkUnit = e => {};
+function LectureFooter({ streamingData }) {
+  // let finish = streamingData.finished;
 
+  let next = streamingData.lecture_id + 1;
+  let before = streamingData.lecture_id - 1;
   return (
     <Container>
       <div>
-        <FontAwesome>
-          <i className="fas fa-chevron-left" />
-          이전 강의
-        </FontAwesome>
-        <Unit>
-          {data.finished === 1 ? <i className="fas fa-check" /> : '봤어요'}
-        </Unit>
-        <FontAwesome>
-          다음 강의
-          <i className="fas fa-chevron-right" />
-        </FontAwesome>
+        <a href={`/lecture/${before}`}>
+          <FontAwesome>
+            <i className="fas fa-chevron-left" />
+            이전 강의
+          </FontAwesome>
+        </a>
+        {streamingData.finished === 1 ? (
+          <Unit>
+            <i className="fas fa-check" />{' '}
+          </Unit>
+        ) : (
+          <Check>봤어요</Check>
+        )}
+        <a href={`/lecture/${next}`}>
+          <FontAwesome>
+            다음 강의
+            <i className="fas fa-chevron-right" />
+          </FontAwesome>
+        </a>
       </div>
     </Container>
   );
@@ -56,7 +66,15 @@ const Unit = styled.span`
   padding: 6px 12px;
   margin: 0 40px;
   border-radius: 4px;
-  cursor: 'pointer';
+  color: #ffffff;
+  line-height: 1.5;
+`;
+
+const Check = styled.span`
+  padding: 6px 12px;
+  margin: 0 40px;
+  border-radius: 4px;
+  cursor: pointer;
   color: #ffffff;
   line-height: 1.5;
 

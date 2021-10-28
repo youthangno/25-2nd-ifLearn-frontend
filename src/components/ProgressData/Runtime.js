@@ -1,4 +1,4 @@
-const Runtime = ({ data }) => {
+const Runtime = data => {
   const section_list = data.section_list;
   let runtimeSecond = 0;
 

@@ -4,11 +4,11 @@ import { lighten } from 'polished';
 import { Link } from 'react-router-dom';
 import useToggle from '../../hooks/useToggle';
 
-const Unit = ({ lecture, key, id }) => {
+const Unit = ({ lecture, key }) => {
   let finish = lecture.finished;
-  console.log('finish', finish);
+
   return (
-    <Link to={`/lecture/${lecture.lecture_id}`}>
+    <a href={`/lecture/${lecture.lecture_id}`}>
       <UnitEl tabIndex="-1" key={key}>
         <Check finish={finish}>
           <i className="fas fa-check" />
@@ -23,7 +23,7 @@ const Unit = ({ lecture, key, id }) => {
           </UnitInfo>
         </TitleCover>
       </UnitEl>
-    </Link>
+    </a>
   );
 };
 

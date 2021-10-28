@@ -22,12 +22,12 @@ const MobileInfoBtn = ({ streamingData }) => {
       </Link>
 
       <Button text="봤어요" icon="fa-check" streamingData={streamingData} />
-      <Link to={`/lecture/${before}`}>
+      <a href={`/lecture/${before}`}>
         <Button text="이전수업" icon="fa-arrow-left" />
-      </Link>
-      <Link to={`/lecture/${next}`}>
+      </a>
+      <a href={`/lecture/${next}`}>
         <Button text="다음수업" icon="fa-arrow-right" />
-      </Link>
+      </a>
     </ButtonList>
   );
 };

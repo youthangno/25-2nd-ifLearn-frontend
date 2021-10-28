@@ -14,7 +14,9 @@ function LectureSideContent({ isOpened, onClick, data }) {
 }
 
 const SideBar = styled.aside`
-  width: ${({ isOpened }) => (isOpened ? '480px' : '0')};
+  width: ${({ isOpened }) => (isOpened ? '1000px' : '0')};
+  height: 100vh;
+  overflow: scroll;
   opacity: ${({ isOpened }) => (isOpened ? '1' : '0')};
   background: #fff;
   transition: width 0.2s ease, opacity 0.2s ease;
