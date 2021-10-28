@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import SearchBtn from './SearchBtn';
+import Nav from '../../components/Nav/Nav';
 import LectureList from './LectureList/LectureList';
 import { API, CONFIGFILTER } from '../../config';
 import SearchResultNotFound from './SearchResultNotFound';
-
 function Courses() {
   const [lectureList, setLectureList] = useState([]);
   const [skillOpen, setSkillOpen] = useState(false);
@@ -68,130 +68,144 @@ function Courses() {
       .then(data => setLectureList(data.result));
   };
   return (
-    <Inner>
-      <Section>
-        <Aside>
-          <Navcategory>
-            <ul>
-              <li>전체강의</li>
-              <li>
-                <SkillIcon>
-                  <div onClick={toggleLecture}>
-                    개발 . 프로그래밍
-                    <Arrow>{skillOpen ? '🡫' : '➔'}</Arrow>
-                  </div>
-                  <ul
-                    className={skillOpen ? 'showLecture' : 'hideLecture'}
-                    onClick={handlePrevent}
-                  >
-                    <li onClick={() => handleCourseFilter(1)}>ALL</li>
-                    <li onClick={() => handleCourseFilter('1/1')}>웹개발</li>
-                    <li onClick={() => handleCourseFilter('1/2')}>
-                      프론트엔드
-                    </li>
-                    <li onClick={() => handleCourseFilter('1/3')}>백엔드</li>
-                  </ul>
-                </SkillIcon>
-              </li>
-              <li>보안.네트워크</li>
-              <li>데이터 사이언스</li>
-              <li>크리에이티브</li>
-              <li>직무.마케팅</li>
-              <li>학문.외국어</li>
-              <li>커리어</li>
-              <li>교양</li>
-            </ul>
-          </Navcategory>
-          <Navcheckbox>
-            <Difficult>난이도</Difficult>
-            <Input>
-              <InputLevel>
-                <input onClick={() => handleLectureFilter(1)} type="checkbox" />{' '}
-                <label>입문</label>
-              </InputLevel>
-              <InputLevel>
-                <input onClick={() => handleLectureFilter(2)} type="checkbox" />{' '}
-                <label>초급</label>
-              </InputLevel>
-              <InputLevel>
-                <input onClick={() => handleLectureFilter(3)} type="checkbox" />{' '}
-                <label>중급이상</label>
-              </InputLevel>
-            </Input>
-          </Navcheckbox>
-        </Aside>
-        <Article>
-          <SearchBtn
-            searchSkill="searchSkill"
-            handleInputSearchResult={handleInputSearchResult}
-          />
-          <Upper>
-            <Category>
-              <span>개발.프로그래밍</span>
-              {/* before로 옆줄 */}
-            </Category>
-            <Button>
-              <select value={optionOpen} onChange={selectOption}>
-                <option value="recommand">추천순</option>
-                <option value="low">낮은가격</option>
-                <option value="high">높은가격</option>
-                <option value="score">평점순</option>
-              </select>
-            </Button>
-          </Upper>
+    <>
+      <Nav />
+      <Inner>
+        <Section>
+          <Aside>
+            <Navcategory>
+              <ul>
+                <li>전체강의</li>
+                <li>
+                  <SkillIcon>
+                    <div onClick={toggleLecture}>
+                      개발 . 프로그래밍
+                      <Arrow>{skillOpen ? '🡫' : '➔'}</Arrow>
+                    </div>
+                    <ul
+                      className={skillOpen ? 'showLecture' : 'hideLecture'}
+                      onClick={handlePrevent}
+                    >
+                      <li onClick={() => handleCourseFilter(1)}>ALL</li>
+                      <li onClick={() => handleCourseFilter('1/1')}>웹개발</li>
+                      <li onClick={() => handleCourseFilter('1/2')}>
+                        프론트엔드
+                      </li>
+                      <li onClick={() => handleCourseFilter('1/3')}>백엔드</li>
+                    </ul>
+                  </SkillIcon>
+                </li>
+                <li>보안.네트워크</li>
+                <li>데이터 사이언스</li>
+                <li>크리에이티브</li>
+                <li>직무.마케팅</li>
+                <li>학문.외국어</li>
+                <li>커리어</li>
+                <li>교양</li>
+              </ul>
+            </Navcategory>
+            <Navcheckbox>
+              <Difficult>난이도</Difficult>
+              <Input>
+                <InputLevel>
+                  <input
+                    onClick={() => handleLectureFilter(1)}
+                    type="checkbox"
+                  />{' '}
+                  <label>입문</label>
+                </InputLevel>
+                <InputLevel>
+                  <input
+                    onClick={() => handleLectureFilter(2)}
+                    type="checkbox"
+                  />{' '}
+                  <label>초급</label>
+                </InputLevel>
+                <InputLevel>
+                  <input
+                    onClick={() => handleLectureFilter(3)}
+                    type="checkbox"
+                  />{' '}
+                  <label>중급이상</label>
+                </InputLevel>
+              </Input>
+            </Navcheckbox>
+          </Aside>
+          <Article>
+            <SearchBtn
+              searchSkill="searchSkill"
+              handleInputSearchResult={handleInputSearchResult}
+            />
+            <Upper>
+              <Category>
+                <span>개발.프로그래밍</span>
+                {/* before로 옆줄 */}
+              </Category>
+              <Button>
+                <select value={optionOpen} onChange={selectOption}>
+                  <option value="recommand">추천순</option>
+                  <option value="low">낮은가격</option>
+                  <option value="high">높은가격</option>
+                  <option value="score">평점순</option>
+                </select>
+              </Button>
+            </Upper>
 
-          <MediumSkill>
-            <SearchBtn handleInputSearchResult={handleInputSearchResult} />
-            <TagBtn>
-              <SkillBtn onClick={() => handleLectureFilter('skill=html')}>
-                Html
-              </SkillBtn>
-              <SkillBtn onClick={() => handleLectureFilter('skill=Css')}>
-                Css
-              </SkillBtn>
-              <SkillBtn onClick={() => handleLectureFilter('skill=styled')}>
-                styled
-              </SkillBtn>
-              <SkillBtn onClick={() => handleLectureFilter('skill=JavaScript')}>
-                JavaScript
-              </SkillBtn>
-              <SkillBtn onClick={() => handleLectureFilter('skill=React')}>
-                React
-              </SkillBtn>
-            </TagBtn>
-          </MediumSkill>
-          <CardList>
-            {/* 검색창 결과값 없을때 띄울것 */}
-            {lectureList ? (
-              lectureList.map(data => (
-                <LectureList
-                  key={data.id}
-                  id={data.id}
-                  title={data.title}
-                  price={data.price}
-                  author={data.author}
-                  popular={data.popular}
-                  thumbnail={data.thumbnail}
-                  summary={data.summary}
-                  level={data.level}
-                  category={data.category}
-                  star={data['star-number']}
-                />
-              ))
-            ) : (
-              <SearchResultNotFound />
-            )}
-          </CardList>
-        </Article>
-      </Section>
-    </Inner>
+            <MediumSkill>
+              <SearchBtn handleInputSearchResult={handleInputSearchResult} />
+              <TagBtn>
+                <SkillBtn onClick={() => handleLectureFilter('skill=html')}>
+                  Html
+                </SkillBtn>
+                <SkillBtn onClick={() => handleLectureFilter('skill=Css')}>
+                  Css
+                </SkillBtn>
+                <SkillBtn onClick={() => handleLectureFilter('skill=styled')}>
+                  styled
+                </SkillBtn>
+                <SkillBtn
+                  onClick={() => handleLectureFilter('skill=JavaScript')}
+                >
+                  JavaScript
+                </SkillBtn>
+                <SkillBtn onClick={() => handleLectureFilter('skill=React')}>
+                  React
+                </SkillBtn>
+              </TagBtn>
+            </MediumSkill>
+            <CardList>
+              {/* 검색창 결과값 없을때 띄울것 */}
+              {lectureList ? (
+                lectureList.map(data => (
+                  <LectureList
+                    key={data.id}
+                    id={data.id}
+                    title={data.title}
+                    price={data.price}
+                    author={data.author}
+                    popular={data.popular}
+                    thumbnail={data.thumbnail}
+                    summary={data.summary}
+                    level={data.level}
+                    category={data.category}
+                    star={data['star-number']}
+                  />
+                ))
+              ) : (
+                <SearchResultNotFound />
+              )}
+            </CardList>
+          </Article>
+        </Section>
+      </Inner>
+    </>
   );
 }
 
 const Inner = styled.div`
   max-width: 1180px;
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 100px;
 `;
 
 const Section = styled.div`
