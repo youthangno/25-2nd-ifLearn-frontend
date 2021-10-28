@@ -37,7 +37,7 @@ function LectureList({
       <p className="title">{title}</p>
       <p>{!mouseOver && author}</p>
       <p>{!mouseOver && star}</p>
-      <P>{!mouseOver && '₩' + parseInt(price)}</P>
+      <P>{!mouseOver && '₩' + parseInt(price).toLocaleString()}</P>
       <p>{mouseOver && summary}</p>
       <P>{mouseOver && '📶' + level}</P>
       <p>{mouseOver && category}</p>
