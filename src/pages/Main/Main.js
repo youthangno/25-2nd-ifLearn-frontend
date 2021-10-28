@@ -1,9 +1,10 @@
 import React from 'react';
 import Nav from '../../components/Nav/Nav';
-import styled from 'styled-components';
 import MainSearch from './MainSearch';
 import MainLecture from './MainLecture';
 import MainSlider from './MainSlider';
+import styled from 'styled-components';
+
 import { useState, useEffect } from 'react';
 import Slider from 'react-slick';
 

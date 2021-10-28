@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { Link, useHistory } from 'react-router-dom';
+import Login from '../../pages/Login/Login';
+import useToggle from '../../hooks/useToggle';
+import { Link } from 'react-router-dom';
 
 export default function Nav() {
   const [navListData, setNavListData] = useState([]);
   const [isNavActive, setIsNavActive] = useState(true);
   const [secondDepthData, setSecondDepthData] = useState([]);
   const [thirdDepthData, setThirdDepthData] = useState([]);
-
-  const history = useHistory();
+  const [isOpened, setIsOpened] = useToggle();
 
   useEffect(() => {
     fetch('../data/category.json')
@@ -17,10 +18,6 @@ export default function Nav() {
         setNavListData(data.result);
       });
   }, []);
-
-  const moveToLogin = () => {
-    history.push('/login');
-  };
 
   return (
     <>
@@ -44,12 +41,12 @@ export default function Nav() {
             <StyledLink to="/">이프런</StyledLink>
           </NavLinkBox>
           <div>
-            <Button onClick={moveToLogin}>로그인</Button>
+            <Button onClick={setIsOpened}>로그인</Button>
             <Button signup>회원가입</Button>
           </div>
         </NavHeader>
       </NavContainer>
-
+      {isOpened ? <Login setIsOpened={setIsOpened} /> : null}
       <NavCategoryBox
         isNavActive={isNavActive}
         onMouseLeave={e => {
