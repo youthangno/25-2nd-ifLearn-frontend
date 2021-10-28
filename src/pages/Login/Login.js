@@ -2,7 +2,7 @@ import React from 'react';
 import { KAKAO_AUTH_URL } from './OAuth';
 import styled from 'styled-components';
 
-export default function Login() {
+export default function Login({ setIsOpened }) {
   const loginAlert = () => {
     alert(
       '아이디와 비밀번호를 확인해주세요 :) 카카오톡 로그인으로 진행해주세요!'
@@ -10,32 +10,47 @@ export default function Login() {
   };
 
   return (
-    <LoginWrapper>
-      <SiteName>ifLearn</SiteName>
-      <input placeholder="이메일 또는 아이디 입력" />
-      <input type="password" placeholder="비밀번호" />
-      <Button onClick={loginAlert}>로그인</Button>
-      <SignupInformation>
-        <h4>비밀번호 찾기</h4>
-        <h4>|</h4>
-        <h4>회원가입</h4>
-      </SignupInformation>
-      <EasyLogin>
-        <div />
-        <h5>간편 로그인</h5>
-      </EasyLogin>
-      <a href={KAKAO_AUTH_URL}>
-        <Button kakao>
-          <img
-            alt="kakaoLogo"
-            src="https://repickus.com/images/btn_kakao.png"
-          />
-          카카오톡 로그인
-        </Button>
-      </a>
-    </LoginWrapper>
+    <>
+      <Background onClick={setIsOpened} />
+      <LoginWrapper>
+        <SiteName>ifLearn</SiteName>
+        <input placeholder="이메일 또는 아이디 입력" />
+        <input type="password" placeholder="비밀번호" />
+        <Button onClick={loginAlert}>로그인</Button>
+        <SignupInformation>
+          <h4>비밀번호 찾기</h4>
+          <h4>|</h4>
+          <h4>회원가입</h4>
+        </SignupInformation>
+        <EasyLogin>
+          <div />
+          <h5>간편 로그인</h5>
+        </EasyLogin>
+        <a href={KAKAO_AUTH_URL}>
+          <Button kakao>
+            <img
+              alt="kakaoLogo"
+              src="https://repickus.com/images/btn_kakao.png"
+            />
+            카카오톡 로그인
+          </Button>
+        </a>
+      </LoginWrapper>
+    </>
   );
 }
+
+const Background = styled.div`
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 10000;
+`;
 
 const LoginWrapper = styled.section`
   position: absolute;
@@ -48,6 +63,7 @@ const LoginWrapper = styled.section`
   background-color: white;
   border-radius: 6px;
   border: 1px solid #dee2e6;
+  z-index: 20000;
 
   input {
     display: block;
