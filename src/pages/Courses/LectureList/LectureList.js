@@ -33,11 +33,11 @@ function LectureList({
       onMouseEnter={handleHoverList}
       onMouseLeave={handleHoverList}
     >
-      <img alt="" src={mouseOver ? null : thumbnail} />
-      <p className="title">{mouseOver ? title : title}</p>
-      <p>{mouseOver ? null : author}</p>
-      <p>{mouseOver ? null : star}</p>
-      <P>{mouseOver ? null : '₩' + price}</P>
+      <img alt="" src={!mouseOver && thumbnail} />
+      <p className="title">{title}</p>
+      <p>{!mouseOver && author}</p>
+      <p>{!mouseOver && star}</p>
+      <P>{!mouseOver && '₩' + parseInt(price)}</P>
       <p>{mouseOver && summary}</p>
       <P>{mouseOver && '📶' + level}</P>
       <p>{mouseOver && category}</p>

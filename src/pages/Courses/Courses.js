@@ -5,6 +5,7 @@ import Nav from '../../components/Nav/Nav';
 import LectureList from './LectureList/LectureList';
 import { API, CONFIGFILTER } from '../../config';
 import SearchResultNotFound from './SearchResultNotFound';
+
 function Courses() {
   const [lectureList, setLectureList] = useState([]);
   const [skillOpen, setSkillOpen] = useState(false);
@@ -14,13 +15,17 @@ function Courses() {
     getList();
   }, []);
 
+  // useEffect(() => {
+  //   handleLectureFilter();
+  // }, [lectureList]);
+
   useEffect(() => {
     handleInputSearchResult();
   }, []);
 
   const getList = () => {
-    fetch(`${API}/`)
-      // fetch('http://localhost:3000/data/data.json')
+    fetch(`${API}/all`)
+      // fetch('http://localhost:3001/data/data.json')
       .then(res => res.json())
       .then(data => setLectureList(data.result));
   };
@@ -37,10 +42,10 @@ function Courses() {
     setOptionOpen(e.target.value);
   };
 
-  //검색창 필터링 버튼
+  //검색창 필터링 버튼aa
   const handleInputSearchResult = search => {
     fetch(`${CONFIGFILTER.SEARCH}${search}&order=search`)
-      // fetch('http://localhost:3000/data/data.json')
+      // fetch('http://localhost:3001/data/data.json')
       .then(res => res.json())
       .then(data => setLectureList(data.result));
   };
@@ -49,12 +54,12 @@ function Courses() {
   const handleLectureFilter = input => {
     if (typeof input === 'number') {
       fetch(`${CONFIGFILTER.LEVEL}${input}`)
-        // fetch('http://localhost:3000/data/data.json')
+        // fetch('http://localhost:3001/data/data.json')
         .then(res => res.json())
         .then(data => setLectureList(data.result));
     } else {
       fetch(`${CONFIGFILTER.TAG}/${input}`)
-        // fetch('http://localhost:3000/data/data.json')
+        // fetch('http://localhost:3001/data/data.json')
         .then(res => res.json())
         .then(data => setLectureList(data.result));
     }
@@ -63,10 +68,11 @@ function Courses() {
   //aside 필터링버튼(Path Parameter)
   const handleCourseFilter = path => {
     fetch(`${CONFIGFILTER.ASIDE}${path}`)
-      // fetch('http://localhost:3000/data/data.json')
+      // fetch('http://localhost:3001/data/data.json')
       .then(res => res.json())
       .then(data => setLectureList(data.result));
   };
+
   return (
     <>
       <Nav />
@@ -79,14 +85,14 @@ function Courses() {
                 <li>
                   <SkillIcon>
                     <div onClick={toggleLecture}>
-                      개발 . 프로그래밍
+                      개발 · 프로그래밍
                       <Arrow>{skillOpen ? '🡫' : '➔'}</Arrow>
                     </div>
                     <ul
                       className={skillOpen ? 'showLecture' : 'hideLecture'}
                       onClick={handlePrevent}
                     >
-                      <li onClick={() => handleCourseFilter(1)}>ALL</li>
+                      <li onClick={() => handleCourseFilter('1')}>ALL</li>
                       <li onClick={() => handleCourseFilter('1/1')}>웹개발</li>
                       <li onClick={() => handleCourseFilter('1/2')}>
                         프론트엔드
@@ -95,11 +101,11 @@ function Courses() {
                     </ul>
                   </SkillIcon>
                 </li>
-                <li>보안.네트워크</li>
+                <li>보안·네트워크</li>
                 <li>데이터 사이언스</li>
                 <li>크리에이티브</li>
-                <li>직무.마케팅</li>
-                <li>학문.외국어</li>
+                <li>직무·마케팅</li>
+                <li>학문·외국어</li>
                 <li>커리어</li>
                 <li>교양</li>
               </ul>
@@ -138,8 +144,7 @@ function Courses() {
             />
             <Upper>
               <Category>
-                <span>개발.프로그래밍</span>
-                {/* before로 옆줄 */}
+                <span>개발·프로그래밍</span>
               </Category>
               <Button>
                 <select value={optionOpen} onChange={selectOption}>
@@ -150,7 +155,6 @@ function Courses() {
                 </select>
               </Button>
             </Upper>
-
             <MediumSkill>
               <SearchBtn handleInputSearchResult={handleInputSearchResult} />
               <TagBtn>
@@ -175,7 +179,7 @@ function Courses() {
             </MediumSkill>
             <CardList>
               {/* 검색창 결과값 없을때 띄울것 */}
-              {lectureList ? (
+              {lectureList &&
                 lectureList.map(data => (
                   <LectureList
                     key={data.id}
@@ -190,11 +194,9 @@ function Courses() {
                     category={data.category}
                     star={data['star-number']}
                   />
-                ))
-              ) : (
-                <SearchResultNotFound />
-              )}
+                ))}
             </CardList>
+            {lectureList.length > 0 ? null : <SearchResultNotFound />}
           </Article>
         </Section>
       </Inner>
@@ -221,12 +223,14 @@ const Aside = styled.div`
   width: 17%;
 `;
 
-const Navcategory = styled.div`
+const Navcategory = styled.span`
   li {
-    padding: 15px 0px;
+    padding: 17px 8px;
     margin-top: -1px;
-    border: 1px solid grey;
+    border: 1px solid #e4e4e4;
     background-color: #f6f6f6;
+    color: #595959;
+    font-weight: 600;
     cursor: pointer;
   }
 `;
@@ -252,7 +256,7 @@ const SkillIcon = styled.div`
 `;
 
 const Arrow = styled.span`
-  padding: 25px;
+  padding: 16px;
 `;
 
 const Navcheckbox = styled.div`
@@ -262,12 +266,15 @@ const Navcheckbox = styled.div`
 const Difficult = styled.div`
   margin: 15px;
   padding: 17px;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  border-top: 1px solid #e4e4e4;
+  border-bottom: 1px solid #e4e4e4;
+  font-weight: bolder;
 `;
 
 const Input = styled.div`
   padding: 0px 0px 10px 10px;
+  color: grey;
+  font-weight: 600;
 `;
 
 const InputLevel = styled.p`
@@ -329,7 +336,7 @@ const CardList = styled.div`
     width: 25%;
     padding: 15px;
     margin-top: 30px;
-    background-color: #002021;
+    background-color: rgba(0, 0, 0, 0.7);
     color: white;
   }
 
@@ -341,8 +348,9 @@ const CardList = styled.div`
     font-size: 1rem;
     font-weight: 700;
   }
+
   p {
-    margin-top: 8px;
+    margin-top: 10px;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
