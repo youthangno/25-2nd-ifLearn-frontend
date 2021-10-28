@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Box from './Box';
+import Nav from '../../components/Nav/Nav';
 import styled from 'styled-components';
 import { useRouteMatch } from 'react-router-dom';
 
@@ -21,122 +22,129 @@ export default function Course() {
 
   return (
     <div>
-      <section>
-        <Background>
-          <article>
-            <Video src={thumbnail} />
-            <Header>
-              <section>
-                <LabelBest>BEST</LabelBest>
-                <span className="categoty">{category}</span>
-                <span>＞</span>
-                <span className="subCategoty">{subcategory}</span>
-              </section>
-              <CourseName>{name}</CourseName>
-              <CourseInfo>
-                <span>
-                  <i className="fas fa-star" />
-                  <i className="fas fa-star" />
-                  <i className="fas fa-star" />
-                  <i className="fas fa-star" />
-                  <i className="fas fa-star" />
-                </span>
-                <span>
-                  <strong> (4.8)</strong>
-                </span>
-                <span>63개의 수강평</span>
-                <span>∙</span>
-                <span>
-                  <strong> 1317명</strong>의 수강생
-                </span>
-              </CourseInfo>
-              <CreatorInfo>
-                <span>
-                  <i className="fas fa-user" />
-                </span>
-                <span>그랩</span>
-                <span>
-                  <i className="fas fa-crown" />
-                </span>
-              </CreatorInfo>
-              <Tags>
-                <span>
-                  <i className="fas fa-hashtag" />
-                </span>
-                <strong>JavaScript</strong>
-                <strong>React</strong>
-              </Tags>
-            </Header>
-          </article>
-        </Background>
-      </section>
-      <section>
-        <MenuContainer>
-          <span>강의 소개</span>
-          <span>커리큘럼</span>
-          <span>수강 후기</span>
-          <span>수강전 문의</span>
-          <span>새소식</span>
-        </MenuContainer>
-      </section>
-      <ContentWrapper>
-        <ContentDetail>
-          <Summary>
-            <span>입문자</span>를 위해 준비한 [<span>{subcategory}</span>]
-            강의입니다.
-          </Summary>
-          <DetailedSummary>{summary}</DetailedSummary>
-          <Box
-            imoticon="✍🏻"
-            upTitle="이런걸"
-            downTitle="배워요!"
-            listArr={firstBox}
-          />
-          <img src={detail} alt="coursePhoto" />
-          <Line />
-          <Tips>
-            지식공유자가 알려주는 <br />
-            <strong>강의수강 꿀팁!</strong>
-          </Tips>
-          <Box
-            imoticon="🎓"
-            upTitle="이런 분들께"
-            downTitle="추천드려요!"
-            listArr={secondBox}
-          />
-          <Box
-            imoticon="📚"
-            upTitle="선수 지식,"
-            downTitle="필요한가요?"
-            listArr={thirdBox}
-          />
-        </ContentDetail>
-        <PriceDetail>
-          <div>
-            <PriceHeader>깜짝 할인중!</PriceHeader>
-            <PriceDetailWrapper>
-              <Price>월 {price}</Price>
-              <ApplyButton>수강 신청</ApplyButton>
-              <FunctionWrapper>
-                <span>
-                  <i className="fas fa-folder" /> 폴더에 추가
-                </span>
-                <span>|</span>
-                <span>
-                  <i className="fas fa-heart" /> 2623
-                </span>
-                <span>|</span>
-                <span>
-                  <i className="fas fa-share-alt" /> 공유
-                </span>
-              </FunctionWrapper>
-            </PriceDetailWrapper>
-          </div>
-        </PriceDetail>
-      </ContentWrapper>
+      <Nav />
+      <WrapContatiner>
+        <section>
+          <Background>
+            <article>
+              <Video src={thumbnail} />
+              <Header>
+                <section>
+                  <LabelBest>BEST</LabelBest>
+                  <span className="categoty">{category}</span>
+                  <span>＞</span>
+                  <span className="subCategoty">{subcategory}</span>
+                </section>
+                <CourseName>{name}</CourseName>
+                <CourseInfo>
+                  <span>
+                    <i className="fas fa-star" />
+                    <i className="fas fa-star" />
+                    <i className="fas fa-star" />
+                    <i className="fas fa-star" />
+                    <i className="fas fa-star" />
+                  </span>
+                  <span>
+                    <strong> (4.8)</strong>
+                  </span>
+                  <span>63개의 수강평</span>
+                  <span>∙</span>
+                  <span>
+                    <strong> 1317명</strong>의 수강생
+                  </span>
+                </CourseInfo>
+                <CreatorInfo>
+                  <span>
+                    <i className="fas fa-user" />
+                  </span>
+                  <span>그랩</span>
+                  <span>
+                    <i className="fas fa-crown" />
+                  </span>
+                </CreatorInfo>
+                <Tags>
+                  <span>
+                    <i className="fas fa-hashtag" />
+                  </span>
+                  <strong>JavaScript</strong>
+                  <strong>React</strong>
+                </Tags>
+              </Header>
+            </article>
+          </Background>
+        </section>
+        <section>
+          <MenuContainer>
+            <span>강의 소개</span>
+            <span>커리큘럼</span>
+            <span>수강 후기</span>
+            <span>수강전 문의</span>
+            <span>새소식</span>
+          </MenuContainer>
+        </section>
+        <ContentWrapper>
+          <ContentDetail>
+            <Summary>
+              <span>입문자</span>를 위해 준비한 [<span>{subcategory}</span>]
+              강의입니다.
+            </Summary>
+            <DetailedSummary>{summary}</DetailedSummary>
+            <Box
+              imoticon="✍🏻"
+              upTitle="이런걸"
+              downTitle="배워요!"
+              listArr={firstBox}
+            />
+            <img src={detail} alt="coursePhoto" />
+            <Line />
+            <Tips>
+              지식공유자가 알려주는 <br />
+              <strong>강의수강 꿀팁!</strong>
+            </Tips>
+            <Box
+              imoticon="🎓"
+              upTitle="이런 분들께"
+              downTitle="추천드려요!"
+              listArr={secondBox}
+            />
+            <Box
+              imoticon="📚"
+              upTitle="선수 지식,"
+              downTitle="필요한가요?"
+              listArr={thirdBox}
+            />
+          </ContentDetail>
+          <PriceDetail>
+            <div>
+              <PriceHeader>깜짝 할인중!</PriceHeader>
+              <PriceDetailWrapper>
+                <Price>월 {price}</Price>
+                <ApplyButton>수강 신청</ApplyButton>
+                <FunctionWrapper>
+                  <span>
+                    <i className="fas fa-folder" /> 폴더에 추가
+                  </span>
+                  <span>|</span>
+                  <span>
+                    <i className="fas fa-heart" /> 2623
+                  </span>
+                  <span>|</span>
+                  <span>
+                    <i className="fas fa-share-alt" /> 공유
+                  </span>
+                </FunctionWrapper>
+              </PriceDetailWrapper>
+            </div>
+          </PriceDetail>
+        </ContentWrapper>
+      </WrapContatiner>
     </div>
   );
 }
+
+const WrapContatiner = styled.section`
+  margin-top: 69px;
+`;
 
 const Background = styled.div`
   padding: 40px 0;
