@@ -71,6 +71,9 @@ const Links = styled.div`
   border-radius: 15px;
   font-size: 12px;
   margin: 0px 5px;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
 `;
 
 const TopLink = styled.div`

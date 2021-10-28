@@ -46,10 +46,10 @@ export default function Main() {
 
           <ControlBoxes>
             <LinkBox>#위코드 25기</LinkBox>
-            <LinkBox forMagin>#2달 간</LinkBox>
+            <LinkBox forMagin>#2달동안</LinkBox>
             <LinkBox>#너무</LinkBox>
             <LinkBox forMagin>#고생하셨습니다.</LinkBox>
-            <LinkBox forBorderColor>#기업협업도</LinkBox>
+            <LinkBox forBorderColor>#앞으로도</LinkBox>
             <LinkBox forMagin>#힘내서</LinkBox>
             <LinkBox>#잘해봐요 우리</LinkBox>
           </ControlBoxes>

@@ -103,7 +103,7 @@ const LinkHover = styled(Link)`
 
 const NavCategoryBox = styled.div`
   display: ${({ isNavActive }) => (isNavActive ? 'none' : 'block')};
-  position: absolute;
+  position: fixed;
   z-index: 9999;
   left: 275px;
 `;

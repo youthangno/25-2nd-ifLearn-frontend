@@ -46,7 +46,6 @@ const Container = styled.section`
     margin-left: 8px;
   }
 `;
-
 const LectureImg = styled.img`
   width: 100%;
   border-radius: 3px;
