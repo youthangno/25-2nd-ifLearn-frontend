@@ -6,19 +6,28 @@ import { useRouteMatch } from 'react-router-dom';
 
 export default function Course() {
   const [courseData, setCourseDats] = useState([]);
-  const match = useRouteMatch();
-  const { id } = match.params;
-  const { name, summary, subcategory, category, thumbnail, detail, price } =
-    courseData;
+  const {
+    name,
+    summary,
+    subcategory,
+    category,
+    thumbnail,
+    detail,
+    price,
+    stars,
+    people,
+    level,
+  } = courseData;
   const firstBox = courseData.course_info?.filter(el => el.info_type_id === 1);
   const secondBox = courseData.course_info?.filter(el => el.info_type_id === 2);
   const thirdBox = courseData.course_info?.filter(el => el.info_type_id === 3);
+  const match = useRouteMatch();
 
   useEffect(() => {
     fetch(`http://10.58.5.115:8000/courses/course/${id}`)
       .then(res => res.json())
       .then(res => setCourseDats(res.result));
-  }, [id]);
+  }, [match]);
 
   return (
     <div>
@@ -45,12 +54,12 @@ export default function Course() {
                     <i className="fas fa-star" />
                   </span>
                   <span>
-                    <strong> (4.8)</strong>
+                    <strong> ({Math.floor(stars * 10) / 10})</strong>
                   </span>
-                  <span>63개의 수강평</span>
+                  <span>{people * 43}개의 수강평</span>
                   <span>∙</span>
                   <span>
-                    <strong> 1317명</strong>의 수강생
+                    <strong> {people * 176}명</strong>의 수강생
                   </span>
                 </CourseInfo>
                 <CreatorInfo>
@@ -85,7 +94,7 @@ export default function Course() {
         <ContentWrapper>
           <ContentDetail>
             <Summary>
-              <span>입문자</span>를 위해 준비한 [<span>{subcategory}</span>]
+              <span>{level}</span>자를 위해 준비한 [<span>{subcategory}</span>]
               강의입니다.
             </Summary>
             <DetailedSummary>{summary}</DetailedSummary>
@@ -118,7 +127,7 @@ export default function Course() {
             <div>
               <PriceHeader>깜짝 할인중!</PriceHeader>
               <PriceDetailWrapper>
-                <Price>월 {price}</Price>
+                <Price>월 {parseInt(price).toLocaleString()}</Price>
                 <ApplyButton>수강 신청</ApplyButton>
                 <FunctionWrapper>
                   <span>
@@ -126,7 +135,7 @@ export default function Course() {
                   </span>
                   <span>|</span>
                   <span>
-                    <i className="fas fa-heart" /> 2623
+                    <i className="fas fa-heart" /> {people * 143}
                   </span>
                   <span>|</span>
                   <span>
