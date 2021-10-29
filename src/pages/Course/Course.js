@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Box from './Box';
 import Nav from '../../components/Nav/Nav';
 import styled from 'styled-components';
-import { useRouteMatch } from 'react-router-dom';
+import { useParams, useRouteMatch } from 'react-router-dom';
 
 export default function Course() {
   const [courseData, setCourseDats] = useState([]);
@@ -21,13 +21,13 @@ export default function Course() {
   const firstBox = courseData.course_info?.filter(el => el.info_type_id === 1);
   const secondBox = courseData.course_info?.filter(el => el.info_type_id === 2);
   const thirdBox = courseData.course_info?.filter(el => el.info_type_id === 3);
-  const match = useRouteMatch();
+  const params = useParams();
 
   useEffect(() => {
-    fetch(`http://10.58.5.115:8000/courses/course/${id}`)
+    fetch(`http://10.58.5.115:8000/courses/course/${params.id}`)
       .then(res => res.json())
       .then(res => setCourseDats(res.result));
-  }, [match]);
+  }, [params]);
 
   return (
     <div>
