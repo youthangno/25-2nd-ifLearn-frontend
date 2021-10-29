@@ -3,6 +3,8 @@ import Box from './Box';
 import Nav from '../../components/Nav/Nav';
 import styled from 'styled-components';
 import { useParams, useRouteMatch } from 'react-router-dom';
+import { useFetch } from '../../hooks/useFetch';
+import ContentBox from '../../components/CourseList/ContentBox';
 
 export default function Course() {
   const [courseData, setCourseDats] = useState([]);
@@ -28,6 +30,12 @@ export default function Course() {
       .then(res => res.json())
       .then(res => setCourseDats(res.result));
   }, [params]);
+
+  const data = useFetch('http://10.58.5.115:8000/courses/video/1');
+
+  console.log('dataCir', data);
+
+  if (!data) return null;
 
   return (
     <div>
@@ -122,7 +130,11 @@ export default function Course() {
               downTitle="필요한가요?"
               listArr={thirdBox}
             />
+            {data.section_list.map(list => (
+              <ContentBox list={list} />
+            ))}
           </ContentDetail>
+
           <PriceDetail>
             <div>
               <PriceHeader>깜짝 할인중!</PriceHeader>
@@ -393,3 +405,5 @@ const Line = styled.div`
   height: 1px;
   border-bottom: 1px solid #ededed;
 `;
+
+const Wrap = styled.div``;

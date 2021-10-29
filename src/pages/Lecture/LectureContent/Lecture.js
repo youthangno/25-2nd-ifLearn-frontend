@@ -13,18 +13,12 @@ import MobileInfo from './Mobile/MobileInfo';
 function Lecture() {
   const match = useRouteMatch();
 
-  const data = useFetch(
-    'http://6d77-211-106-114-186.ngrok.io/course/video/500'
-  );
+  const data = useFetch('http://10.58.5.115:8000/courses/video/1');
 
   const streamingData = useFetch(
-    `http://6d77-211-106-114-186.ngrok.io/course/video/detail/${match.params.id}`
+    `http://10.58.5.115:8000/courses/video/detail/${match.params.id}`
   );
-
-  console.log('match.params', match.params.id);
-
-  console.log(streamingData);
-
+  console.log('data', data);
   if (!data || !streamingData) return null;
 
   return (

@@ -8,7 +8,6 @@ import Button from '../../../../components/Button/Button';
 const MobileInfoBtn = ({ streamingData }) => {
   let next = streamingData.lecture_id + 1;
   let before = streamingData.lecture_id - 1;
-  console.log('streamingData', streamingData.finished);
 
   return (
     <ButtonList>

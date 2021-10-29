@@ -7,7 +7,7 @@ import Percent from '../../../components/ProgressData/Percent';
 
 const Progress = ({ data }) => {
   let period = data.period;
-  console.log('data', data.section_legnth);
+
   const unLimit = period => {
     if (period === 999) {
       return '무제한';
