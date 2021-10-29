@@ -4,6 +4,7 @@ import MainSearch from './MainSearch';
 import MainLecture from './MainLecture';
 import MainSlider from './MainSlider';
 import styled from 'styled-components';
+import { API } from '../../config';
 
 import { useState, useEffect } from 'react';
 import Slider from 'react-slick';
@@ -21,7 +22,7 @@ export default function Main() {
   }, []);
 
   useEffect(() => {
-    fetch('https://6d77-211-106-114-186.ngrok.io/course/')
+    fetch(`${API}/all`)
       .then(res => res.json())
       .then(data => {
         setData(data.result);

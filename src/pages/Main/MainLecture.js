@@ -3,33 +3,17 @@ import styled from 'styled-components';
 import { useHistory } from 'react-router';
 
 export default function MainVideo({ lecture }) {
-  const isChangeStar = num => {
-    switch (num) {
-      case 0:
-        return '☆';
-      case 1:
-      case 2:
-      case 3:
-      case 4:
-      case 5:
-        return '★'.repeat(num);
-      default:
-        throw new Error('out of range');
-    }
-  };
-
   const history = useHistory();
   const goToCourse = () => {
     history.push(`/course/${lecture.id}`);
   };
-
   return (
     <Container onClick={goToCourse}>
       <LectureImg src={lecture.thumbnail} alt="img" />
       <LectureTitle>{lecture.title}</LectureTitle>
       <LectureAuthor>{lecture.author}</LectureAuthor>
-      <LectureStars>{isChangeStar(lecture['star-number'])}</LectureStars>
-      <LecturePrice>{lecture.price}</LecturePrice>
+      <LectureStars>⭐️⭐️⭐️⭐️⭐️</LectureStars>
+      <LecturePrice>{parseInt(lecture.price).toLocaleString()}</LecturePrice>
     </Container>
   );
 }
