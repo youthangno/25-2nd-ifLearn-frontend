@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import SearchBtn from './SearchBtn';
 import Nav from '../../components/Nav/Nav';
 import LectureList from './LectureList/LectureList';
-import { API, CONFIGFILTER } from '../../config';
+import { KJH_API, API, CONFIGFILTER } from '../../config';
 import SearchResultNotFound from './SearchResultNotFound';
 
 function Courses() {

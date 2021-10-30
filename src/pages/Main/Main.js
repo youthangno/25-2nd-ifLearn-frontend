@@ -4,7 +4,7 @@ import MainSearch from './MainSearch';
 import MainLecture from './MainLecture';
 import MainSlider from './MainSlider';
 import styled from 'styled-components';
-import { API } from '../../config';
+import { KMC_API, KJH_API } from '../../config';
 
 import { useState, useEffect } from 'react';
 import Slider from 'react-slick';
@@ -14,7 +14,7 @@ export default function Main() {
   const [images, setImage] = useState([]);
 
   useEffect(() => {
-    fetch('https://6d77-211-106-114-186.ngrok.io/carousel/')
+    fetch(`${KMC_API}/carousel/`)
       .then(res => res.json())
       .then(images => {
         setImage(images.result);
@@ -22,7 +22,7 @@ export default function Main() {
   }, []);
 
   useEffect(() => {
-    fetch(`${API}/all`)
+    fetch(`${KJH_API}/courses/all`)
       .then(res => res.json())
       .then(data => {
         setData(data.result);
