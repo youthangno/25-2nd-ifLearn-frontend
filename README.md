@@ -1,33 +1,35 @@
-### 1. 팀 소개
+# ifLearn
 
----
+## Introduction
+[ infLearn 사이트](https://www.inflearn.com/)  프로젝트<br>
+강의 동영상 스트리밍 서비스입니다.
+- 기간: 2021. 10. 18. ~ 2021. 10. 29.
+- [Backend GitHub](https://github.com/wecode-bootcamp-korea/25-2nd-ifLearn-backend)
+- ifLearn 사이트의 기획과 디자인을 제외한 모든 기능과 데이터는 직접 구현하였습니다.
+- 초기 세팅부터 직접 구현하였으며, 모든 데이터는 프론트와 백의 통신으로 받아온 데이터입니다.
 
-### 팀 명을 작성해주세요
+## Members
+- **Frontend**: 김경현, 김동휘, 손호영, 이상철
+- **Backend**: 김민찬, 김주형
 
-IfLearn
+## Technology
+- **Frontend**: `JSX` `React(CRA)`, `React Hook`, `Sass` (Library: `React-router-DOM`)
+- **Backend**: `Python`, `Django Web Framework`, `AWS`, `MySQL`
+- **Common**: 버전관리 `Git & GitHub`, 소통 `Slack`, 일정관리 Trello
 
-### 팀원 소개를 작성해주세요
+## Main Function
+- **메인 페이지**: 
+- **소셜 로그인**: 카카오API를 이용한 소셜 로그인/로그아웃 기능
+- **강의 리스트**: 
+- **강의 상세 페이지**: 
+- **강의 상세 페이지 (영상 스트리밍)**: 
 
-프론트엔드 - 김경현, 김동휘, 손호영, 이상철
-백엔드 - 김민찬, 김주형
+## Part
+- 김경현: 영상 스트리밍
+- 김동휘: 소셜 로그인, 강의 상세 페이지
+- 손호영: 강의 리스트
+- 이상철: 메인 페이지
 
-### 우리 서비스의 핵심 강점을 강조하여, 소개 문구를 작성합니다
+## Demo
+<img width="1682" alt="스크린샷 2021-10-31 오후 12 54 47" src="https://user-images.githubusercontent.com/81722144/139566782-b9b4eb2d-2cef-4a26-a561-fefd934f3d96.png">
 
-싸나이들의 남자냄새나는 페이지를 만드는 것.
-
-### 제공하는 메인 서비스를 소개해주세요
-
-강의동영상 스트리밍 서비스입니다.
-
-### 이번 프로젝트에서 꼭 구현하고 싶은 기능을 정리해주세요
-
-1. 소셜 로그인기능
-2. 필터 정렬기능
-3. 동영상 스트리밍 기능
-4. 캐로셀 기능
-5. 페이지네이션 기능
-
-### 핵심 기능 외에 추가적으로 구현하고 싶은 기능을 정리해주세요
-
-1. 장바구니
-2. 결제
