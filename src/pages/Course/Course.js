@@ -34,8 +34,6 @@ export default function Course() {
 
   const data = useFetch(`${KJH_API}/courses/video/1`);
 
-  console.log('dataCir', data);
-
   if (!data) return null;
 
   return (
