@@ -32,7 +32,7 @@ export default function Course() {
       .then(res => setCourseDats(res.result));
   }, [params]);
 
-  const data = useFetch('http://10.58.5.115:8000/courses/video/1');
+  const data = useFetch(`${KJH_API}/courses/video/1`);
 
   console.log('dataCir', data);
 

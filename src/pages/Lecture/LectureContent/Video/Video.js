@@ -49,7 +49,7 @@ function Video({ src }) {
 }
 const VideoMain = styled.video`
   background-color: #171717;
-  height: 660px;
+  height: 90vh;
   width: 100%;
 `;
 
