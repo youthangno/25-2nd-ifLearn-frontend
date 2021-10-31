@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import { useParams, useRouteMatch } from 'react-router-dom';
 import { useFetch } from '../../hooks/useFetch';
 import ContentBox from '../../components/CourseList/ContentBox';
+import { KJH_API } from '../../config';
 
 export default function Course() {
   const [courseData, setCourseDats] = useState([]);
@@ -26,7 +27,7 @@ export default function Course() {
   const params = useParams();
 
   useEffect(() => {
-    fetch(`http://10.58.5.115:8000/courses/course/${params.id}`)
+    fetch(`${KJH_API}/courses/course/${params.id}`)
       .then(res => res.json())
       .then(res => setCourseDats(res.result));
   }, [params]);

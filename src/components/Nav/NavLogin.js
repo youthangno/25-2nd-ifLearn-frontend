@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Login from '../../pages/Login/Login';
 import useToggle from '../../hooks/useToggle';
 import { Link } from 'react-router-dom';
+import { API } from '../../config';
 
 export default function Nav({ isLogined, isTokenValid }) {
   const [navListData, setNavListData] = useState([]);
@@ -79,7 +80,7 @@ export default function Nav({ isLogined, isTokenValid }) {
             })}
           </div>
           <div>
-            {thirdDepthData.map(data => {
+            {thirdDepthData?.map(data => {
               return (
                 <ThirdCategory key={data.id}>
                   <LinkHover to="/courses">{data.name}</LinkHover>
