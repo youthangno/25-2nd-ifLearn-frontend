@@ -1,8 +1,8 @@
 export const BACKEND_TOKEN_URL =
-  'http://f192-211-178-217-79.ngrok.io/users/login';
+  'http://00f6-211-106-114-186.ngrok.io/users/login';
 
 // export const API = `https://6d77-211-106-114-186.ngrok.io/course`;
-export const API = `http://f192-211-178-217-79.ngrok.io/courses`;
+export const API = `http://00f6-211-106-114-186.ngrok.io/courses`;
 export const CONFIGFILTER = {
   ASIDE: `${API}/`,
   LEVEL: `${API}/all?level=`,
@@ -10,5 +10,5 @@ export const CONFIGFILTER = {
   SEARCH: `${API}/all?search=`,
 };
 
-export const KJH_API = 'http://f192-211-178-217-79.ngrok.io';
+export const KJH_API = 'http://00f6-211-106-114-186.ngrok.io';
 export const KMC_API = `http://6d77-211-106-114-186.ngrok.io`;

@@ -13,13 +13,13 @@ export default function Main() {
   const [data, setData] = useState([]);
   const [images, setImage] = useState([]);
 
-  useEffect(() => {
-    fetch(`${KMC_API}/carousel/`)
-      .then(res => res.json())
-      .then(images => {
-        setImage(images.result);
-      });
-  }, []);
+  // useEffect(() => {
+  //   fetch(`${KMC_API}/carousel/`)
+  //     .then(res => res.json())
+  //     .then(images => {
+  //       setImage(images.result);
+  //     });
+  // }, []);
 
   useEffect(() => {
     fetch(`${KJH_API}/courses/all`)

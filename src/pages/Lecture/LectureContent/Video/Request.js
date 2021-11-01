@@ -1,4 +1,4 @@
-const Request = async (src, sourceBuffer, i = 0) => {
+const Request = async (sourceBuffer, i = 0) => {
   const chunkCount = 100;
   const start = 100000;
   const length = 41927339;
@@ -8,7 +8,7 @@ const Request = async (src, sourceBuffer, i = 0) => {
     start + segmentSize * (i + 1) - 1
   }`;
 
-  const res = await fetch(src, {
+  const res = await fetch('http://10.58.4.154:8000/course/sample_dance.mp4', {
     headers: {
       Range: range,
     },
