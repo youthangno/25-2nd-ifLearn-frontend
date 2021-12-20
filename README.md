@@ -3,17 +3,12 @@
 ## Introduction
 
 [ infLearn 사이트](https://www.inflearn.com/) 프로젝트<br>
-강의 동영상 스트리밍 서비스입니다.
+동영상 강의 스트리밍 서비스입니다.
 
 - 기간: 2021. 10. 18. ~ 2021. 10. 29.
-- [Backend GitHub](https://github.com/wecode-bootcamp-korea/25-2nd-ifLearn-backend)
 - ifLearn 사이트의 기획과 디자인을 제외한 모든 기능과 데이터는 직접 구현하였습니다.
 - 초기 세팅부터 직접 구현하였으며, 모든 데이터는 프론트와 백의 통신으로 받아온 데이터입니다.
-
-## Members
-
-- **Frontend**: 김경현, 김동휘, 손호영, 이상철
-- **Backend**: 김민찬, 김주형
+- 프론트엔드 4인, 백엔드 2인으로 구성된 팀입니다.
 
 ## Technology
 
@@ -31,11 +26,10 @@
 
 ## Part
 
-- 김경현: 영상 스트리밍
-- 김동휘: 소셜 로그인, 강의 상세 페이지
-- 손호영: 강의 리스트
-- 이상철: 메인 페이지
+- 손호영: 강의 리스트 페이지
+
 
 ## Demo
 
 <img width="1682" alt="스크린샷 2021-10-31 오후 12 54 47" src="https://user-images.githubusercontent.com/81722144/139566782-b9b4eb2d-2cef-4a26-a561-fefd934f3d96.png">
+https://www.youtube.com/watch?v=ncfkby6QBHs
