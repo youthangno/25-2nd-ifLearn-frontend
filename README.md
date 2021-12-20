@@ -16,21 +16,25 @@
 - **Backend**: `Python`, `Django Web Framework`, `AWS`, `MySQL`
 - **Common**: 버전관리 `Git & GitHub`, 소통 `Slack`, 일정관리 Trello
 
-## Main Function
-
-- - **강의 리스트**
-- **메인 페이지**
-- **소셜 로그인**
-- **강의 상세 페이지 (영상 스트리밍)**:
-
 ## Part
 
-- 손호영: 강의 리스트 페이지
+- 손호영: 강의 리스트 페이지<br>
+
   - React Functional Component와 Hooks 를 사용하여 구성
   - Array 타입을 활용한 데이터 핸들링
   - React Hook을 이용한 클릭 이벤트(toggle) 상태 관리
   - RESTFul API를 통한 Back-end 통신
   - Path parameters를 사용한 동적 라우팅 구현
+
+
+## Main Function
+
+- **강의 리스트**
+- **메인 페이지**
+- **소셜 로그인**
+- **강의 상세 페이지 (영상 스트리밍)**:
+
+
 
 
 ## Demo
